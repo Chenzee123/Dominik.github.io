@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生日快乐！</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f7e7ce;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #4a4a4a;
+            text-align: center;
+            overflow: hidden;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 10;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 0.5em;
+            color: #e74c3c;
+        }
+        p {
+            font-size: 1.5em;
+            margin-bottom: 1em;
+        }
+        .balloons {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            animation: float 6s ease-in-out infinite;
+            z-index: 1;
+        }
+        .balloons img {
+            width: 100px;
+            height: auto;
+        }
+        .cakes {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            background-image: url('https://yourcakeimageurl.com'); /* 替换为蛋糕背景图片的URL */
+            background-repeat: repeat-x;
+            background-size: contain;
+            z-index: 5;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translate(-50%, 0);
+            }
+            50% {
+                transform: translate(-50%, -20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="balloons">
+        <img src="https://yourballoonimageurl.com" alt="气球"> <!-- 替换为气球图片的URL -->
+        <img src="https://yourballoonimageurl.com" alt="气球">
+        <img src="https://yourballoonimageurl.com" alt="气球">
+        <img src="https://yourballoonimageurl.com" alt="气球">
+        <img src="https://yourballoonimageurl.com" alt="气球">
+    </div>
+
+    <div class="container">
+        <h1>生日快乐！</h1>
+        <p>愿你的每一天都像今天一样快乐、精彩。</p>
+    </div>
+
+    <div class="cakes"></div>
+</body>
+</html>
